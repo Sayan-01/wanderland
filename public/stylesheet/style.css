@@ -68,6 +68,7 @@ footer {
 .card-img-top {
   border-radius: 0.7rem !important;
   width: 100% !important;
+  aspect-ratio: 16/14;
 }
 
 .card-body {
