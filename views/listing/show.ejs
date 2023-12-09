@@ -1,22 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Listing in detail</h1>
-  <ul>
-    <li><%= fulllisting.title %></li>
-    <li><%= fulllisting.description %></li>
-    <li>&#8377;<%= fulllisting.price.toLocaleString("en-IN") %></li>
-    <li><%= fulllisting.location %></li>
-  </ul>
-  <br />
-    <a href="/listing/<%= fulllisting._id %>/edit">Edit this Listing</a>
-    <form method="post" action="/listing/<%=fulllisting._id%>?_method=DELETE">
-      <button style="margin: 0; padding: 0;">Delet</button>
+<% layout('/layouts/boilerplats') -%>
+
+<div class="show-main body px-lg-5 px-md-3 px-sm-3 px-3 body">
+  <h2>Listing in detail</h2>
+
+  <div class="s-123">
+    <div class="show-img ">
+      <img style="margin-right: 0.8rem;" class=" my-sm-3 my-3" src="<%= fulllisting.image %>" /><img class=" mb-sm-3 my-3"
+        src="<%= fulllisting.image %>"
+      />
+    </div>
+    <h3><%= fulllisting.title %></h3>
+    <div class="show-about">
+      <p><%= fulllisting.description %></p>
+      <p>&#8377;<%=fulllisting.price.toLocaleString("en-IN") %></p>
+      <p><%= fulllisting.location %>, <%= fulllisting.country %></p>
+    </div>
+    <div class="edit-btn">
+      <a href="/listing/<%= fulllisting._id %>/edit"><button class="a">Edit</button></a>
+    </div>
+    <form class="delet-btn" method="post" action="/listing/<%=fulllisting._id%>?_method=DELETE">
+      <button class="a">Delet</button>
     </form>
-</body>
-</html>
+  </div>
+</div>

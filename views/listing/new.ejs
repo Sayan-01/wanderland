@@ -1,26 +1,74 @@
 <% layout('/layouts/boilerplats') -%>
-<body>
-  <h3>Create a New Listing</h3>
-  <form method="POST" action="/listing">
-    <input name="listing[title]" placeholder="enter title" type="text" />
-    <br /><br />
-    <textarea
-      name="listing[description]"
-      placeholder="enter description"
-    ></textarea>
-    <br /><br />
-    <input
-      name="listing[image]"
-      placeholder="enter image URL/Link"
-      type="text"
-    />
-    <br /><br />
-    <input name="listing[price]" placeholder="enter price" type="number" />
-    <br /><br />
-    <input name="listing[country]" placeholder="enter country" type="text" />
-    <br /><br />
-    <input name="listing[location]" placeholder="enter location" type="text" />
-    <br /><br />
-    <button>Add</button>
-  </form>
-</body>
+<div class="new-listing body px-lg-5 px-md-3 px-sm-3 px-3 body row">
+  <div class="col-6 offset-md-3 offset-sm-0">
+    <h3>Create a New Listing</h3>
+
+    <form method="POST" action="/listing">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          name="listing[title]"
+          placeholder="enter title"
+          type="text"
+          class="form-control"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          id="exampleInputPassword1"
+          name="listing[description]"
+          placeholder="enter description"
+        ></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input
+          name="listing[image]"
+          placeholder="enter image URL/Link"
+          type="text"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input
+          name="listing[price]"
+          placeholder="enter price"
+          type="number"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input
+          name="listing[country]"
+          placeholder="enter country"
+          type="text"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input
+          name="listing[location]"
+          placeholder="enter location"
+          type="text"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+  </div>
+</div>

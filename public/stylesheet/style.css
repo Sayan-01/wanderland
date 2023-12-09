@@ -8,11 +8,11 @@ html,
 body {
   width: 100% !important;
   height: 100% !important;
-  /* background-color: #222327!important; */
+  overflow-y: scroll;
 }
 
-html::-webkit-scrollbar {
-  display: none;
+body::-webkit-scrollbar {
+  display: none !important;
 }
 
 a {
@@ -24,7 +24,6 @@ a {
   border-bottom: 1.5px solid rgba(183, 180, 180, 0.443);
   background-color: #fff;
   padding: 0 5rem !important;
-  position: sticky;
 }
 
 #navbarNavAltMarkup {
@@ -61,7 +60,7 @@ footer {
 }
 
 .body {
-  margin: 1rem 0 3rem !important;
+  margin: 1.1rem 0 3rem !important;
   padding-top: 0px !important;
 }
 
@@ -93,4 +92,44 @@ ion-icon {
 a h2 {
   font-weight: 520;
   font-size: 25px;
+}
+
+.support {
+  height: 100%;
+  width: 137.5px;
+}
+
+.show-about p {
+  margin: 0 0 5px 0;
+}
+
+.show-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.show-img img {
+  height: 23.5rem;
+  width: 34.5rem;
+  border-radius: 13px;
+}
+
+.edit-btn, .delet-btn {
+  padding: 5px;
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+  background-color: #fe424d;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.a {
+  border: none;
+  outline: none;
+  background-color: #fe424d;
+  color: white;
+
 }
