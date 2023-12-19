@@ -1,10 +1,10 @@
-<% layout('/layouts/boilerplats') -%>
+<% layout('/layouts/boilerplats') -%>     <!--layouts ar jonno full path likhte hoy na -->
 
 <div class="new-listing body px-lg-5 px-md-3 px-sm-3 px-3 body row">
   <div class="col-6 offset-md-3 offset-sm-0">
     <h3>Create a New Listing</h3>
 
-    <form method="POST" action="/listing/<%= listing._id %>?_method=PUT">
+    <form method="POST" action="/listing/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input
@@ -13,6 +13,7 @@
           type="text"
           class="form-control"
           value="<%= listing.title %>"
+          required
         />
       </div>
 
@@ -23,6 +24,7 @@
           id="exampleInputPassword1"
           name="listing[description]"
           placeholder="enter description"
+          required
         >
 <%= listing.description %></textarea
         >
@@ -37,6 +39,7 @@
           class="form-control"
           id="exampleInputPassword1"
           value="<%= listing.image %>"
+          required
         />
       </div>
 
@@ -49,6 +52,7 @@
           class="form-control"
           id="exampleInputPassword1"
           value="<%= listing.price %>"
+          required
         />
       </div>
 
@@ -61,6 +65,7 @@
           class="form-control"
           id="exampleInputPassword1"
           value="<%= listing.country %>"
+          required
         />
       </div>
 
@@ -73,6 +78,7 @@
           class="form-control"
           id="exampleInputPassword1"
           value="<%= listing.location %>"
+          required
         />
       </div>
 
