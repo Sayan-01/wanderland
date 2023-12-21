@@ -20,3 +20,18 @@
     );
   });
 })();
+
+let a = 0;
+
+const ham = document.querySelector(".ham");
+const manu = document.querySelector(".manu");
+
+ham.addEventListener("click", () => {
+  if (a === 0) {
+    manu.classList.remove("hidden");
+    a = 1;
+  } else {
+    manu.classList.add("hidden");
+    a = 0;
+  }
+});

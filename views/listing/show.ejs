@@ -21,5 +21,20 @@
     <form class="delet-btn" method="post" action="/listing/<%=fulllisting._id%>?_method=DELETE">
       <button class="a">Delet</button>
     </form>
+    <div>
+      <h4>Leave a review</h4>
+      <form>
+        <div>
+          <label for="rating">Rating</label>
+          <input type="range" name="review">
+        </div>
+        <br>
+        <div>
+          <label for="comment">Comment</label>
+          <textarea name="comment" class="form-control" rows="6"></textarea><br>
+          <button>submit</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

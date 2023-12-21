@@ -1,0 +1,92 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box !important;
+  font-family: "Concert One", sans-serif;
+}
+
+html,
+body {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fe424d;
+  flex-direction: column;
+  cursor:pointer;
+}
+
+h1 {
+  font-size: 5rem;
+  color: white;
+}
+
+h2 {
+  font-size: 3.8rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #fe424d;
+}
+
+h6 {
+  font-size: 2.5rem;
+}
+
+a div {
+  background-color: white;
+  padding: 10px 40px 13px 40px;
+  border-radius: 30px;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+.sayan {
+  font-size: 27px;
+  position: absolute;
+  right: 4px;
+  bottom: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.sayan a{
+  color: white;
+}
+
+@media (max-width: 630px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fe424d;
+  }
+
+  h6 {
+    font-size: 1.5rem;
+  }
+
+  a div {
+    background-color: white;
+    padding: 6px 12px 9px 12px;
+    border-radius: 30px;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  .sayan {
+    font-size: 15px;
+  }
+}

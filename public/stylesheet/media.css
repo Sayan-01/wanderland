@@ -1,0 +1,26 @@
+@media (max-width: 1140px) {
+  .abnb-img{
+    object-fit: cover;
+    flex: 0 1 100px;
+    width: 30px;
+  }
+  .color { 
+    width: 30px;
+    object-fit: cover;
+    object-position: left;
+  }
+}
+
+@media (max-width: 940px) {
+  .abnb-img{
+    object-fit: cover;
+    flex: 0 1 0px!important;
+  }
+}
+
+@media (min-width: 940px) and (max-width: 1140px) {
+  
+  .support{
+    flex: 0 1 280px!important;
+  }
+}
