@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html,
@@ -111,6 +112,12 @@ a h2 {
   flex-direction: column;
 }
 
+.show-img {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 .show-img img {
   height: 23.5rem;
   width: 34.5rem;
@@ -136,9 +143,13 @@ a h2 {
   color: white;
 }
 
+.b {
+  display: inline-block;
+}
+
 .navbar-nav {
   /* background-color: #fe424d; */
-  padding: 10.4px 8px 10.6px 8px !important;
+  padding: 10.5px 8px 10.5px 8px !important;
   border-radius: 30px;
   border: 1px solid rgba(4, 4, 4, 0.158);
   box-shadow: 0px 1.3px 5px -2px rgba(0, 0, 0, 0.474);
@@ -205,6 +216,7 @@ a h2 {
   background-color: white;
   top: 70px;
   right: 0px;
+  cursor:default;
 }
 
 .manu a {
@@ -220,7 +232,6 @@ a h2 {
   height: 25px;
   opacity: 0.8;
   width: 24px;
-  
 }
 
 .ham div {
@@ -252,15 +263,17 @@ a h2 {
 }
 
 .a-bnb-home {
-   display: flex;
-   align-items: center;
-
+  display: flex;
+  align-items: center;
 }
 
 .a-bnb-home a h6 {
   margin: 0;
 }
 
+.delete-pop p {
+  margin: 0 !important;
+}
 .support {
   display: flex;
   align-items: center;
@@ -269,5 +282,59 @@ a h2 {
 }
 
 .abnb-img {
-  flex: 1 0 140px 
+  flex: 1 0 140px;
+}
+
+.review-box {
+  border: 1px solid rgba(0, 0, 0, 0.251);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 400px !important;
+}
+
+.delete-pop {
+  background-color: #fe424d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  width: 100%;
+  position: fixed;
+  bottom: -84px;
+  transition: all 0.3s linear;
+}
+
+.delete-pop h5 {
+  position:absolute;
+  left: 20px;
+  margin: 0;
+}
+
+.delete-pop button {
+  border: #fff!important;
+  color: #fff;
+}
+
+.lift {
+  bottom: 0px!important;
+}
+
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup .div1 {
+  width: 450px;
+  border: 4px solid #fe424d;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px;
+}
+
+input, textarea{
+  border: 1px solid rgba(0, 0, 0, 0.373)!important;
 }

@@ -1,10 +1,6 @@
 (() => {
   "use strict";
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
   const forms = document.querySelectorAll(".needs-validation");
-
-  // Loop over them and prevent submission
   Array.from(forms).forEach((form) => {
     form.addEventListener(
       "submit",
@@ -35,3 +31,10 @@ ham.addEventListener("click", () => {
     a = 0;
   }
 });
+
+const del = document.querySelector(".delet-btn");
+const delPop = document.querySelector(".delete-pop")
+
+del.addEventListener("click", () => {
+  delPop.classList.add("lift")
+})
