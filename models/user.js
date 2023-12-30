@@ -6,7 +6,7 @@ const userSchema = new Schema({
   email: {
     type: String,
     require: true
-  }     //autometic vabe ekhane username ar key valu pair creat hoyjabe
+  }     //autometic vabe ekhane username ar key creat hoyjabe
 });
 
 userSchema.plugin(passportLocalMongoose);

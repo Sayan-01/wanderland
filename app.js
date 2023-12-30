@@ -5,14 +5,16 @@ const path = require("path");
 const methodOverride = require("method-override");
 engine = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
-const listingSchema = require("./schema_joi.js");
+// const listingSchema = require("./schema_joi.js");
+const session = require("express-session");
+const flash = require("connect-flash");
 const passport = require("passport");
-const localStategy = require("passport-local");
-const User = require("./models/user.js")
+const LocalStrategy = require("passport-local");
+const User = require("./models/user.js");
 
 const listings = require("./routes/listing.js");
 const reviews = require("./routes/review.js");
-const user = require("./routes/user.js")
+const user = require("./routes/user.js");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -38,9 +40,34 @@ app.get("/", (req, res) => {
   res.render("listing/landing-page.ejs");
 });
 
-app.use("/listing", listings)
-app.use("/listing/:id/reviews", reviews)
-app.use("/", user)
+const sess = {
+  secret: "mySecret",
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    expires: Date.now() + 1000 * 60 * 60 * 24 * 3,
+    maxAge: 1000 * 60 * 60 * 24 * 3,
+    httpsOnly: true,
+  },
+};
+app.use(session(sess));
+app.use(flash());
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser()); //ai  5 ta line amake authentication ar 3 te package use ar jonno likhtei hobe
+
+app.use((req, res, next) => {
+  res.locals.success = req.flash("success"); //success in an array
+  res.locals.error = req.flash("error");
+  next();
+});
+
+app.use("/listing", listings);
+app.use("/listing/:id/reviews", reviews);
+app.use("/", user);
 
 app.all("*", (req, res, next) => {
   next(new ExpressError(404, "ERROR, PAGE NOT FOUND")); //ata mandetory, protita server ai code ta likhtei hoy for err handling

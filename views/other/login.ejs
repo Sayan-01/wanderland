@@ -1,7 +1,7 @@
 <% layout('/layouts/boilerplats') -%>
 <div class="signup">
     <div class="div1">
-      <form action="/signup" method="post" class="needs-validation" novalidate>
+      <form action="/login" method="post" class="needs-validation" novalidate>
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
           <input
@@ -11,19 +11,9 @@
             required
           />
           <div class="invalid-feedback">enter username!</div>
-        </div>
+        </div><br<<hr>
 
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input
-            name="email"
-            type="text"
-            class="form-control"
-            required
-          />
-          <div class="invalid-feedback">give email!</div><br><hr>
-        </div>
-
+        
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
           <input
@@ -34,7 +24,7 @@
           />
           <div class="valid-feedback">Looks good!</div>
         </div>
-        <button class="btn btn-success">Sign up</button>
+        <button class="btn btn-success">Login</button>
       </form>
     </div>
 

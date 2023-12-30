@@ -10,7 +10,7 @@ need things
 for starting the webapp
       =>Open command line
       =>cd to Full-Stack-Airbnb-clone directory
-      =>Then write in cl nodemone app.js or node app.js
+      =>Then write in comand line nodemone app.js or node app.js
 
 for searching the webapp
       =>search in browser localhost:3000/listing
