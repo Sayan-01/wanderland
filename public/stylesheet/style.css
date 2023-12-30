@@ -343,12 +343,9 @@ input, textarea{
   position: absolute!important;
   z-index: 6;
   bottom: 0;
-  min-width: 400px;
+  min-width: 700px;
   left: 50%;
   transform: translate(-50%, 0);
+  padding: 23px!important;
 }
 
-.flash button {
-  outline: none!important;
-  border: none!important;
-}
