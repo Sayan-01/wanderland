@@ -17,6 +17,10 @@ router.get(
 
 //new post ar jonno new ejs file show korbe
 router.get("/new", (req, res) => {
+  if(!req.isAuthenticated()) {      // passport ar by default method ja login/sign up ar thakle true return kore r noyto false return kore
+    req.flash("error", "Login / signup for add listing");
+    res.redirect("/login")
+  }
   res.render("listing/new.ejs");
 });
 

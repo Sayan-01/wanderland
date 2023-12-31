@@ -21,6 +21,7 @@ let a = 0;
 
 const ham = document.querySelector(".ham");
 const manu = document.querySelector(".manu");
+const screen = document.querySelector(".screen")
 
 ham.addEventListener("click", () => {
   if (a === 0) {
@@ -31,6 +32,13 @@ ham.addEventListener("click", () => {
     a = 0;
   }
 });
+
+// screen.addEventListener("click", () => {
+//   if (a !== 0) {
+//     manu.classList.add("hidden");
+//     a = 1;
+//   }
+// })
 
 const del = document.querySelector(".delet-btn");
 const delPop = document.querySelector(".delete-pop")

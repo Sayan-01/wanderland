@@ -13,6 +13,10 @@ router.post("/signup", async (req, res) => {//ekhane demo user creat holo //ekha
     let newUser = new User({ email, username });
     let registorUser = await User.register(newUser, password); //equvalent to newUser.save()
     // console.log(registorUser);     ar output asbe DB te save hoya user ar object with username , email, salt, hash etc key value pair
+    req.login(registorUser, () => {
+      req.flash("success", "Now you Log out!");
+      res.redirect("/listing");
+    })
     req.flash("success", "User was authorized");
     res.redirect("/listing");
   } catch (error) {
@@ -29,5 +33,12 @@ router.post("/login", passport.authenticate("local", { failureRedirect: '/login'
   req.flash("success", "Successfully login")
   res.redirect("/listing");
 });
+
+router.get("/logout", (req, res) => {
+  req.logout(() => {
+    req.flash("success", "Now you Log out!");
+    res.redirect("/listing");
+  })
+})
 
 module.exports = router;

@@ -45,8 +45,8 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   cookie: {
-    expires: Date.now() + 1000 * 60 * 60 * 24 * 3,
-    maxAge: 1000 * 60 * 60 * 24 * 3,
+    expires: Date.now() + (1000 * 60 * 60 * 24 * 3),
+    maxAge: (1000 * 60 * 60 * 24 * 3),
     httpsOnly: true,
   },
 };
@@ -62,6 +62,7 @@ passport.deserializeUser(User.deserializeUser()); //ai  5 ta line amake authenti
 app.use((req, res, next) => {
   res.locals.success = req.flash("success"); //success in an array
   res.locals.error = req.flash("error");
+  res.locals.currentUser = req.user;
   next();
 });
 
