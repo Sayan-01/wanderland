@@ -1,4 +1,4 @@
-# Full-Stack-Airbnb-clone
+# Full-Stack-Airbnb-clone [In Process]
 This is full MERN stack Airbnb clone (in process)
 
 need things 
@@ -13,7 +13,5 @@ for starting the webapp
       =>Then write in comand line nodemone app.js or node app.js
 
 for searching the webapp
-      =>search in browser localhost:3000/listing
-
-## In this commit mostly focused on Error handling + Some style chenges
+      =>search in browser localhost:3000
 
