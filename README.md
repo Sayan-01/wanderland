@@ -1,4 +1,4 @@
-# Full-Stack-Airbnb-clone [In Process]
+# Full-Stack-Airbnb-clone(using NVC framewark) [In Process]
 This is full MERN stack Airbnb clone (in process)
 
 need things 

@@ -18,17 +18,34 @@
     <div class="delet-btn">
       <button class="a">Delet</button>
     </div>
+    <hr>
     <% } %>
     <div>
       
 <!-- review form -->
       <% if(currentUser) { %>
-        <h4>Leave a review</h4>
+        <h3>Leave a review</h3>
         <form method="post" action="/listing/<%= fulllisting._id %>/reviews" novalidate class="needs-validation">
           <div class="mb-4 mt-4">
-            <label for="rating" class="form-label">Rating</label>
-            <input type="range" min="1" max="5" style="border: 0px!important;" name="rating" class="form-range" />
+          
+          <label>Rating</label>
+          <fieldset class="starability-grow">
+            <legend></legend>
+            <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="1" checked aria-label="No rating." />
+            <input type="radio" id="first-rate1" name="rating" value="1" />
+            <label for="first-rate1" title="Terrible">1 star</label>
+            <input type="radio" id="first-rate2" name="rating" value="2" />
+            <label for="first-rate2" title="Not good">2 stars</label>
+            <input type="radio" id="first-rate3" name="rating" value="3" />
+            <label for="first-rate3" title="Average">3 stars</label>
+            <input type="radio" id="first-rate4" name="rating" value="4" />
+            <label for="first-rate4" title="Very good">4 stars</label>
+            <input type="radio" id="first-rate5" name="rating" value="5" />
+            <label for="first-rate5" title="Amazing">5 stars</label>
+          </fieldset>
           </div>
+
+
             <div class="mb-4">
             <label for="comment" class="form-label">Comment</label>
             <textarea name="comment" class="form-control" rows="6" required></textarea>
@@ -44,7 +61,7 @@
 <!-- show reviews -->
       <h3>All Rviews</h3>
 
-      <div class="show-review">
+      <div class="show-review row ">
         <%for (review of fulllisting.reviews) {%>
 
         <!-- fulllisting obj a nirdisto id ar all details ache r ekh
@@ -54,11 +71,15 @@
               
             }-->
 
-        <div class="review-box">
-          <p></p>
-          <i><h6>@<%= review.author.username %></h6></i>
-          <p><%=review.comment%>&nbsp;</p>
-          <p style="display: inline-block"><%=review.rating%>&nbsp;<i class="bi bi-star-fill"></i></p>
+        <div class="card review-box col-md-2 w-50">
+          <div class="px-1">
+            <i><h6>@<%= review.author.username %></h6></i>
+          </div>
+            <p class="starability-result" data-rating="<%=review.rating%>">
+            </p>
+          <div class="px-1">
+            <p><%=review.comment%>&nbsp;</p>
+          </div>
           <form class="b" method="POST" action="/listing/<%=fulllisting._id%>/reviews/<%=review._id%>?_method=DELETE">
             <button class="btn btn-dark">Delet</button>
           </form>
