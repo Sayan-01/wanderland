@@ -62,7 +62,7 @@ passport.deserializeUser(User.deserializeUser()); //ai  5 ta line amake authenti
 app.use((req, res, next) => {
   res.locals.success = req.flash("success"); //success in an array
   res.locals.error = req.flash("error");
-  res.locals.currentUser = req.user;  //req.user k direct ejs template a use korte parbo na tai locals assave korlam
+  res.locals.currentUser = req.user;  //req.user k direct ejs template a use korte parbo na tai locals assave korlam, r access ar jonno kebol currentUser likte hobey
   next();
 });
 

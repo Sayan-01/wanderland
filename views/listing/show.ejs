@@ -5,35 +5,43 @@
 
   <div class="s-123">
     <div class="show-img"><img style="margin-right: 0.8rem" class="my-sm-3 my-3" src="<%= fulllisting.image %>" /><img class="mb-sm-3 my-3" src="<%= fulllisting.image %>" /></div>
-    <h3><%= fulllisting.title %></h3>
+    <h3><%= fulllisting.title %> ( <b>@<%= fulllisting.owner.username %></b> )</h3>
     <div class="show-about">
       <p><%= fulllisting.description %></p>
       <p>&#8377;&nbsp;<%=fulllisting.price.toLocaleString("en-IN") %></p>
       <p><%= fulllisting.location %>, <%= fulllisting.country %></p>
     </div>
+    <% if(currentUser && currentUser.username == fulllisting.owner.username) { %>
     <div class="edit-btn">
       <a href="http://localhost:3000/listing/<%= fulllisting._id %>/edit"><button class="a">Edit</button></a>
     </div>
     <div class="delet-btn">
       <button class="a">Delet</button>
     </div>
+    <% } %>
     <div>
-      <br />
-      <h4>Leave a review</h4>
-      <form method="post" action="/listing/<%= fulllisting._id %>/reviews" novalidate class="needs-validation">
-        <div class="mb-4 mt-4">
-          <label for="rating" class="form-label">Rating</label>
-          <input type="range" min="1" max="5" style="border: 0px!important;" name="rating" class="form-range" />
-        </div>
-        <div class="mb-4">
-          <label for="comment" class="form-label">Comment</label>
-          <textarea name="comment" class="form-control" rows="6" required></textarea>
-          <div class="invalid-feedback">please fill it first</div>
-          <br />
-          <button class="btn btn-outline-dark">submit</button>
-        </div>
-      </form>
+      
+<!-- review form -->
+      <% if(currentUser) { %>
+        <h4>Leave a review</h4>
+        <form method="post" action="/listing/<%= fulllisting._id %>/reviews" novalidate class="needs-validation">
+          <div class="mb-4 mt-4">
+            <label for="rating" class="form-label">Rating</label>
+            <input type="range" min="1" max="5" style="border: 0px!important;" name="rating" class="form-range" />
+          </div>
+            <div class="mb-4">
+            <label for="comment" class="form-label">Comment</label>
+            <textarea name="comment" class="form-control" rows="6" required></textarea>
+            <div class="invalid-feedback">please fill it first</div>
+            <br />
+            <button class="btn btn-outline-dark">submit</button>
+          </div>
+        </form>
+      <% } %>
+
       <hr />
+
+<!-- show reviews -->
       <h3>All Rviews</h3>
 
       <div class="show-review">
@@ -48,7 +56,7 @@
 
         <div class="review-box">
           <p></p>
-          <h5>sayan das</h5>
+          <i><h6>@<%= review.author.username %></h6></i>
           <p><%=review.comment%>&nbsp;</p>
           <p style="display: inline-block"><%=review.rating%>&nbsp;<i class="bi bi-star-fill"></i></p>
           <form class="b" method="POST" action="/listing/<%=fulllisting._id%>/reviews/<%=review._id%>?_method=DELETE">
@@ -61,6 +69,7 @@
   </div>
 </div>
 
+<!-- listing delet ar final popup -->
 <div class="delete-pop">
   <h5>x</h5>
   <p>Are you sure, you want to delete thid listing &nbsp;
