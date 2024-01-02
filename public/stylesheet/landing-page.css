@@ -1,8 +1,13 @@
+@font-face {
+  font-family: concert;
+  src: url(../font/ConcertOne-Regular.ttf);
+}
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box !important;
-  font-family: "Concert One", sans-serif;
+  font-family: concert;
 }
 
 html,
