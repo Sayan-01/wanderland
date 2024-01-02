@@ -1,13 +1,13 @@
 @font-face {
-  font-family: nunito;
-  src: url(../font/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+  font-family: montserrat;
+  src: url(../font/Montserrat-VariableFont_wght.ttf);
 }
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box !important;
-  font-family: nunito;
+  font-family: montserrat;
 }
 
 html,
