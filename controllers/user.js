@@ -1,7 +1,9 @@
+const Listing = require("../models/listing.js");
+const Review = require("../models/review.js");
 const User = require("../models/user.js");
 
 module.exports.signUpForm = (req, res) => {
-  res.render("other/signup.ejs");
+  res.render("authentication/signup.ejs");
 };
 
 module.exports.signUp = async (req, res) => {
@@ -22,7 +24,7 @@ module.exports.signUp = async (req, res) => {
 };
 
 module.exports.logInForm = (req, res) => {
-  res.render("other/login.ejs");
+  res.render("authentication/login.ejs");
 };
 
 module.exports.logIn = async (req, res) => {

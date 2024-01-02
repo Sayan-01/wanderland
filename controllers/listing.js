@@ -33,9 +33,12 @@ module.exports.newListingSave = async (req, res, next) => {
   //   throw new ExpressError(400, result.error);
   // }
 
+  let url = req.file.path; //req.body te jemon urlencoded data ase temon req.file a file parse hoy malter ar jonno
+  let filename = req.file.filename;
   const newListing = new Listing(req.body.listing); //ekhon kotha holo listing obj elo ki kore karon req.body to amon hoyar kotha => {title: ..., description: ..., ....}. But amra akta object toi ri korbo jar key hobe title, desctiption... and oi object ar namr hobe listing sutorang req.body print korle asbe {listing: {title: ..., ....}}
   //console.log(newListing);     gives a new object {title: ..., description: ..., ....}
   newListing.owner = req.user._id; //owner key te value add korar jonno
+  newListing.image = { url, filename };
   await newListing.save(); //newlisting printkorle akta object asbe r seta 70 no. line (console.log(req.body.listing)) a ache
   req.flash("success", "New listing was created!"); //ai line ar maddhome success ar jonno flash creat koraholo
   res.redirect("/listing");
@@ -53,9 +56,16 @@ module.exports.editForm = async (req, res, next) => {
 
 module.exports.listingUpdate = async (req, res, next) => {
   let { id } = req.params;
-  await Listing.findByIdAndUpdate(id, { ...req.body.listing }); //ekhane "..." dea destacturing korlam karon ekhetre 2nd argument hisabe object a key value pain pass korte hoto
+  const newListing = await Listing.findByIdAndUpdate(id, { ...req.body.listing }); //ekhane "..." dea destacturing korlam karon ekhetre 2nd argument hisabe object a key value pain pass korte hoto
   // console.log(req.body.listing);     ar ans hobe akta {title: ..., description: ..., ....}
   // console.log(req.body);       ar ans hobe akta {listing: {title: ..., description: ..., ....}}
+
+  if (req.file) {
+    let url = req.file.path; //req.body te jemon urlencoded data ase temon req.file a file parse hoy malter ar jonno
+    let filename = req.file.filename;
+    newListing.image = { url, filename };
+    newListing.save();
+  }
   req.flash("success", "Listing updated!");
   res.redirect(`/listing/${id}`);
 };

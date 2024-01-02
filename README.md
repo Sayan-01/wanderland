@@ -14,4 +14,3 @@ for starting the webapp
 
 for searching the webapp
       =>search in browser localhost:3000
-

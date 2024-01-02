@@ -76,6 +76,8 @@ footer {
   border-radius: 0.7rem !important;
   width: 100% !important;
   aspect-ratio: 16/14;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card-body {
@@ -127,6 +129,8 @@ a h2 {
   height: 23.5rem;
   width: 34.5rem;
   border-radius: 13px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .edit-btn,
