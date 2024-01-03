@@ -38,18 +38,18 @@ h6 {
 
 a div {
   background-color: white;
-  padding: 10px 40px 13px 40px;
-  border-radius: 30px;
+  padding: 0.62rem 2.5rem 0.8rem 2.5rem;
+  border-radius: 1.8rem;
 }
 
 h3 {
   font-size: 3.2rem;
 }
 .sayan {
-  font-size: 27px;
+  font-size: 1.6rem;
   position: absolute;
-  right: 4px;
-  bottom: 2px;
+  right: 0.25rem;
+  bottom: 0.12rem;
   display: flex;
   align-items: center;
 }
@@ -78,8 +78,8 @@ h3 {
 
   a div {
     background-color: white;
-    padding: 6px 12px 9px 12px;
-    border-radius: 30px;
+    padding: 0.4rem 0.75rem 0.6rem 0.75rem;
+    border-radius: 1.8rem;
   }
 
   h3 {
@@ -87,6 +87,6 @@ h3 {
   }
 
   .sayan {
-    font-size: 15px;
+    font-size: 0.9rem;
   }
 }
