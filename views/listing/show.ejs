@@ -13,7 +13,7 @@
     </div>
     <% if(currentUser && currentUser.username == fulllisting.owner.username) { %>
     <div class="edit-btn">
-      <a href="http://localhost:3000/listing/<%= fulllisting._id %>/edit"><button class="a">Edit</button></a>
+      <a href="/listing/<%= fulllisting._id %>/edit"><button class="a">Edit</button></a>
     </div>
     <div class="delet-btn">
       <button class="a">Delet</button>
