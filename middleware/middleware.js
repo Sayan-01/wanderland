@@ -6,7 +6,7 @@ module.exports.isLogin = async (req, res, next) => {
     // passport ar by default method ja login/sign up ar thakle true return kore r noyto false return kore
     req.session.redirectUrl = req.originalUrl;
     req.flash("error", "At first loggedin");
-    res.redirect("/login");
+    return res.redirect("/login");
   }
   next();
 };
