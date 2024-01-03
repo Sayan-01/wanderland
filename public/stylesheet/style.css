@@ -1,13 +1,8 @@
-@font-face {
-  font-family: montserrat;
-  src: url(../font/Montserrat-VariableFont_wght.ttf);
-}
-
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box !important;
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html,
@@ -193,10 +188,10 @@ a h2 {
 
 .nav-2 {
   background-color: rgb(253, 253, 253);
-  height: 90px;
+  height: 100px;
   width: 100%;
   position: sticky !important;
-  top: 80px !important;
+  top: 5rem !important;
   z-index: 5;
   display: flex;
   align-items: center;
