@@ -9,6 +9,7 @@ engine = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 // const listingSchema = require("./schema_joi.js");
 const session = require("express-session");
+const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
@@ -32,18 +33,36 @@ app.listen(3000, () => {
   console.log("listening");
 });
 
+
+
+const dbUrl = process.env.ATLASDB_URL;
+
 main().catch((err) => console.log(err));
 
+
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/wanderlust");
+  await mongoose.connect(dbUrl);
 }
 
 app.get("/", (req, res) => {
   res.render("listing/landing-page.ejs");
 });
 
+const store = MongoStore.create({   //method to creat ney mongo store
+  mongoUrl: dbUrl,
+  crypto: {
+    secret: process.env.SECRET
+  },
+  touchAfter: 36000 * 24
+})
+
+store.on("error", () => {
+  console.log("ErroR is :->",err);
+})
+
 const sess = {
-  secret: "mySecret",
+  store,
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -52,8 +71,11 @@ const sess = {
     httpsOnly: true,
   },
 };
+
 app.use(session(sess));
 app.use(flash());
+
+
 
 app.use(passport.initialize());
 app.use(passport.session());
