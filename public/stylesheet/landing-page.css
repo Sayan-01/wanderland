@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box !important;
-  font-family: "Concert One", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html,
@@ -19,11 +19,6 @@ body {
 
 h1 {
   font-size: 5rem;
-  color: white;
-}
-
-h2 {
-  font-size: 3.8rem;
   color: white;
 }
 
@@ -45,6 +40,7 @@ a div {
 h3 {
   font-size: 3.2rem;
 }
+
 .sayan {
   font-size: 1.6rem;
   position: absolute;
