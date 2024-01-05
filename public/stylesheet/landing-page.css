@@ -56,11 +56,7 @@ h3 {
 
 @media (max-width: 630px) {
   h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 2.8rem;
+    font-size:12vw;
   }
 
   a {
@@ -69,7 +65,7 @@ h3 {
   }
 
   h6 {
-    font-size: 1.5rem;
+    font-size: 6.2vw;
   }
 
   a div {
@@ -79,7 +75,7 @@ h3 {
   }
 
   h3 {
-    font-size: 2.2rem;
+    font-size: 8vw;
   }
 
   .sayan {

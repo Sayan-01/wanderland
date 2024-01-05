@@ -3,6 +3,7 @@
     object-fit: cover;
     flex: 0 1 100px;
     width: 30px;
+    margin-right: 10px;
   }
   .color { 
     width: 30px;
@@ -11,16 +12,41 @@
   }
 }
 
-@media (max-width: 940px) {
+@media (max-width: 991px) {
   .abnb-img{
     object-fit: cover;
     flex: 0 1 0px!important;
   }
 }
 
-@media (min-width: 940px) and (max-width: 1140px) {
+@media (min-width: 991px) and (max-width: 1140px) {
   
   .support{
     flex: 0 1 280px!important;
   }
+}
+
+@media (max-width: 775px) {
+  .support, .abnb-img{
+    display: none;
+  }
+  .navbar{
+    border-bottom: none;
+  }
+  #navbarNavAltMarkup{
+    width: 100%;
+  }
+  .search-hide{
+    padding: 14px 0px;
+    width: 100%;
+    display: block;
+  }
+  .navbar-nav{
+    padding: 14px 11px;
+    width: 100%;
+  }
+  .for-navbarnav-hide{
+    display: none;
+  }
+  
 }

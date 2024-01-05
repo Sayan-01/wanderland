@@ -24,13 +24,7 @@ a {
   height: 5rem;
   border-bottom: 1.5px solid rgba(183, 180, 180, 0.443);
   background-color: #fff;
-}
-
-#navbarNavAltMarkup {
-  display: flex;
-  justify-content: center;
-  flex: 0 1 auto;
-  margin: 0 24px;
+  padding: 0!important;
 }
 
 .nav-link {
@@ -42,7 +36,6 @@ a {
 }
 
 .container-fluid {
-  padding: 12px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,18 +146,35 @@ a h2 {
 
 .navbar-nav {
   /* background-color: #fe424d; */
-  padding: 10.5px 8px 10.5px 8px !important;
+  padding: 10.5px 8px 10.5px 8px ;
   border-radius: 30px;
   border: 1px solid rgba(4, 4, 4, 0.158);
   box-shadow: 0px 1.3px 5px -2px rgba(0, 0, 0, 0.474);
   -webkit-box-shadow: 0px 1.3px 5px -2px rgba(0, 0, 0, 0.471);
   -moz-box-shadow: 0px 1.3px 5px -2px rgba(0, 0, 0, 0.472);
   transition: all 0.1s linear;
+  flex-direction: row!important;
 }
 
 .navbar-nav a {
   color: #000000;
   padding: 0 1rem !important;
+}
+
+.search {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.search-hide {
+  display: none;
+}
+
+.navbarNavAltmarkup{
+  
+  justify-content: center;
+  flex: 0 1 auto;
+  margin: 0 24px;
 }
 
 .navbar-nav:hover {
