@@ -3,7 +3,7 @@
     object-fit: cover;
     flex: 0 1 100px;
     width: 30px;
-    margin-right: 10px;
+    margin-right: 20px;
   }
   .color { 
     width: 30px;
@@ -47,6 +47,12 @@
   }
   .for-navbarnav-hide{
     display: none;
+  }
+  .filter-2, .gst{
+    display: none;
+  }
+  .nav-2{
+    height: 74px;
   }
   
 }

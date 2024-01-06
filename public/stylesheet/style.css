@@ -287,6 +287,8 @@ a h2 {
 
 .delete-pop p {
   margin: 0 !important;
+  text-align: center
+  ;
 }
 .support {
   display: flex;
@@ -313,10 +315,10 @@ a h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+  padding: 25px 50px;
   width: 100%;
   position: fixed;
-  bottom: -86px;
+  bottom: -130px;
   transition: all 0.3s linear;
 }
 

@@ -1,28 +1,70 @@
 <% layout('/layouts/boilerplats') -%>
-<div class="nav-2 px-lg-5 px-md-3 px-sm-3 px-3"></div>
-  <div class="row px-lg-5 px-md-3 px-sm-3 px-3 body mx-xl-4">    <!--px mean padding at x-axis-->
-    <% for(let list of alllisting) { %>
-    <!-- ekane alllisting arr array theke protita obj k list a store kora holo, then amara oi list obj ta k babohar korbo  -->
-    <div class="col-md-4 col-lg-3 col-sm-6">
-      <a href="/listing/<%= list._id %>"
-        ><div class="card">
-          <img
-            src="<%=list.image.url%>"
-            class="card-img-top"
-            alt="..."
-          
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-body">
-            <p class="card-text">
-              <b><%= list.title %></b> <br />
-              <%= list.location %><br />
-              <%= list.country %><br />
-              <b>&#8377;&nbsp;<%= list.price.toLocaleString("en-IN") %></b> night
-            </p>
-          </div>
-        </div></a
-      >
+
+<style>
+  .filter-2 , .gst {
+    border: 1px solid;
+    border-radius: 15px;
+    border: 1px solid rgb(213, 213, 213);
+  }
+
+  .filter {
+    padding: 0 12px;
+    width: calc(100% - 220px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .filter-1 {
+    max-height: 50px;
+    flex: 1;
+    overflow: auto;
+  }
+
+  .filter-2 {
+    width: 92px;
+    height: 3rem;
+  }
+
+  .gst {
+    height: 3rem;
+    width: 240px;
+    margin-right: 12px;
+  }
+
+  i {
+    font-size: 30px;
+  }
+</style>
+
+<div class="nav-2 px-lg-5 px-md-3 px-sm-3 px-3 mx-xl-4">
+  <div class="filter">
+    <div class="filter-1">
     </div>
-    <% } %>
+    <div class="filter-2"></div>
   </div>
+  <div class="gst"></div>
+</div>
+<div class="row px-lg-5 px-md-3 px-sm-3 px-3 body mx-xl-4">
+  <!--px mean padding at x-axis-->
+  <% for(let list of alllisting) { %>
+  <!-- ekane alllisting arr array theke protita obj k list a store kora holo, then amara oi list obj ta k babohar korbo  -->
+  <div class="col-md-4 col-lg-3 col-sm-6">
+    <a href="/listing/<%= list._id %>"
+      ><div class="card">
+        <img src="<%=list.image.url%>" class="card-img-top" alt="..." />
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><%= list.title %></b> <br />
+            <%= list.location %><br />
+            <%= list.country %><br />
+            <b>&#8377;&nbsp;<%= list.price.toLocaleString("en-IN") %></b> night
+          </p>
+        </div>
+      </div></a
+    >
+  </div>
+  <% } %>
+</div>
