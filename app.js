@@ -29,12 +29,6 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "/public")));
 app.engine("ejs", engine);
 
-app.listen(3000, () => {
-  console.log("listening");
-});
-
-
-
 const dbUrl = process.env.ATLASDB_URL;
 
 main().catch((err) => console.log(err));
@@ -101,4 +95,8 @@ app.all("*", (req, res, next) => {
 app.use((err, req, res, next) => {
   let { status = 500, message = "something wrong" } = err; //ata mandetory, protita server ai code ta likhtei hoy for err handling
   res.render("error/error.ejs", { message });
+});
+
+app.listen(3000, () => {
+  console.log("listening");
 });
