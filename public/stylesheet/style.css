@@ -390,7 +390,7 @@ textarea {
   display: grid;
   grid-auto-flow: column;
   width: 400px;
-  margin: 0px 22px 0px 12px;
+  margin: 0px 12px 0px 12px;
   flex: 1;
   border-radius: 15px;
 }
@@ -402,7 +402,7 @@ textarea {
 .filter-2 {
   width: 92px;
   height: 3rem;
-  margin-right: 18px;
+  margin: 0 18px 0 10px;
 }
 
 .gst {
