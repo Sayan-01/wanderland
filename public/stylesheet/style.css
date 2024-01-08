@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box !important;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html,
@@ -16,6 +16,10 @@ body::-webkit-scrollbar {
   display: none !important;
 }
 
+.filters::-webkit-scrollbar {
+  display: none !important;
+}
+
 a {
   text-decoration: none !important;
 }
@@ -24,7 +28,7 @@ a {
   height: 5rem;
   border-bottom: 1.5px solid rgba(183, 180, 180, 0.443);
   background-color: #fff;
-  padding: 0!important;
+  padding: 0 !important;
 }
 
 .nav-link {
@@ -146,14 +150,13 @@ a h2 {
 
 .navbar-nav {
   /* background-color: #fe424d; */
-  padding: 10.5px 8px 10.5px 8px ;
+  padding: 10.5px 8px 10.5px 8px;
   border-radius: 30px;
-  border: 1px solid rgba(4, 4, 4, 0.158);
-  box-shadow: 0px 1.3px 5px -2px rgba(0, 0, 0, 0.474);
-  -webkit-box-shadow: 0px 1.3px 5px -2px rgba(0, 0, 0, 0.471);
-  -moz-box-shadow: 0px 1.3px 5px -2px rgba(0, 0, 0, 0.472);
+  -webkit-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.234);
+  box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.228);
   transition: all 0.1s linear;
-  flex-direction: row!important;
+  flex-direction: row !important;
 }
 
 .navbar-nav a {
@@ -170,8 +173,7 @@ a h2 {
   display: none;
 }
 
-.navbarNavAltmarkup{
-  
+.navbarNavAltmarkup {
   justify-content: center;
   flex: 0 1 auto;
   margin: 0 24px;
@@ -198,7 +200,7 @@ a h2 {
 
 .nav-2 {
   background-color: rgb(253, 253, 253);
-  height: 100px;
+  height: 90px;
   width: 100%;
   position: sticky !important;
   top: 5rem !important;
@@ -230,7 +232,7 @@ a h2 {
   background-color: white;
   top: 70px;
   right: 0px;
-  cursor:default;
+  cursor: default;
 }
 
 .manu a {
@@ -287,8 +289,7 @@ a h2 {
 
 .delete-pop p {
   margin: 0 !important;
-  text-align: center
-  ;
+  text-align: center;
 }
 .support {
   display: flex;
@@ -323,18 +324,18 @@ a h2 {
 }
 
 .delete-pop h5 {
-  position:absolute;
+  position: absolute;
   left: 20px;
   margin: 0;
 }
 
 .delete-pop button {
-  border: #fff!important;
+  border: #fff !important;
   color: #fff;
 }
 
 .lift {
-  bottom: 0px!important;
+  bottom: 0px !important;
 }
 
 .signup {
@@ -351,17 +352,84 @@ a h2 {
   margin: 30px;
 }
 
-input, textarea{
-  border: 1px solid rgba(0, 0, 0, 0.373)!important;
+input,
+textarea {
+  border: 1px solid rgba(0, 0, 0, 0.373) !important;
 }
 
 .flash {
-  position: absolute!important;
+  position: absolute !important;
   z-index: 6;
   bottom: 0;
   min-width: 700px;
   left: 50%;
   transform: translate(-50%, 0);
-  padding: 23px!important;
+  padding: 23px !important;
 }
 
+/* Filter css */
+
+.filter-2,
+.gst {
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.234);
+  box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.228);
+}
+
+.filter {
+  padding: 0 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.filter-1 {
+  overflow-x: auto;
+  display: grid;
+  grid-auto-flow: column;
+  width: 400px;
+  margin: 0px 22px 0px 12px;
+  flex: 1;
+  border-radius: 15px;
+}
+
+.filter-1::-webkit-scrollbar {
+  display: none !important;
+}
+
+.filter-2 {
+  width: 92px;
+  height: 3rem;
+  margin-right: 18px;
+}
+
+.gst {
+  height: 3rem;
+  width: 240px;
+  margin-right: 12px;
+}
+
+i {
+  font-size: 30px;
+}
+
+.cell {
+  height: 70px;
+  margin: 0 50px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 400 !important;
+}
+
+.cell img {
+  height: 30px;
+}
+
+.cell p {
+  margin: 0;
+}
