@@ -123,7 +123,10 @@ a h2 {
 }
 
 .show-img img {
-  height: 28.9vmin;
+  width: 44vmin;
+  aspect-ratio: 16/12;
+  object-fit: cover;
+  object-position: center;
   border-radius: 13px;
   object-fit: cover;
   object-position: center;
@@ -194,6 +197,7 @@ a h2 {
 }
 
 .alert {
+  width: 90vmin;
   margin-top: 1rem !important;
   display: flex;
   align-items: center;
@@ -364,10 +368,9 @@ textarea {
   position: absolute !important;
   z-index: 6;
   bottom: 0;
-  min-width: 700px;
   left: 50%;
   transform: translate(-50%, 0);
-  padding: 23px !important;
+  padding: 15px 23px !important;
 }
 
 /* Filter css */
