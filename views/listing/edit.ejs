@@ -1,8 +1,19 @@
-<% layout('/layouts/boilerplats') -%>
-<!--layouts ar jonno full path likhte hoy na -->
+<% layout('/layouts/boilerplats') -%>  <!--layouts ar jonno full path likhte hoy na -->
 
-<div class="new-listing body px-lg-5 px-md-3 px-sm-3 px-3 body row">
-  <div class="col-6 offset-md-3 offset-sm-0">
+<style>
+  .new-listing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .new-listing-2 {
+    width: 70vmin;
+  }
+</style>
+
+<div class="new-listing body">
+  <div class="new-listing-2">
     <h3>Edit the Listing</h3>
 
     <form method="POST" action="/listing/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
