@@ -14,6 +14,7 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
+const Listing = require("./models/listing.js")
 
 const listings = require("./routes/listing.js");
 const reviews = require("./routes/review.js");
@@ -30,6 +31,8 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.engine("ejs", engine);
 
 const dbUrl = process.env.ATLASDB_URL;
+// const dbUrl2 = "mongodb://localhost:27017/a";
+
 
 main().catch((err) => console.log(err));
 
@@ -37,10 +40,6 @@ main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(dbUrl);
 }
-
-app.get("/", (req, res) => {
-  res.render("listing/landing-page.ejs");
-});
 
 const store = MongoStore.create({   //method to creat ney mongo store
   mongoUrl: dbUrl,
@@ -84,9 +83,20 @@ app.use((req, res, next) => {
   next();
 });
 
+
+app.get("/", (req, res) => {
+  res.render("listing/landing-page.ejs");
+});
+
 app.use("/listing", listings);
 app.use("/listing/:id/reviews", reviews);
 app.use("/", user);
+
+app.get("/listing/filter/:category", async(req, res) => {
+  let {category} = req.params;
+  let alllisting = await Listing.find({category: category}) 
+  res.render("listing/home.ejs", { alllisting: alllisting })
+})
 
 app.all("*", (req, res, next) => {
   next(new ExpressError(404, "ERROR, PAGE NOT FOUND")); //ata mandetory, protita server ai code ta likhtei hoy for err handling

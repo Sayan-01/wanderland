@@ -81,6 +81,20 @@
         />
       </div>
 
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <input
+          name="listing[category]"
+          placeholder="enter category"
+          type="text"
+          class="form-control"
+          id="exampleInputPassword1"
+          value="<%= listing.category %>"
+          required
+        />
+        <div class="invalid-feedback">Provide a valid category.</div>
+      </div>
+
       <button type="submit" class="btn btn-dark">Submit</button>
     </form>
   </div>

@@ -33,13 +33,6 @@ ham.addEventListener("click", () => {
   }
 });
 
-// screen.addEventListener("click", () => {
-//   if (a !== 0) {
-//     manu.classList.add("hidden");
-//     a = 1;
-//   }
-// })
-
 const del = document.querySelector(".delet-btn");
 const delPop = document.querySelector(".delete-pop")
 
