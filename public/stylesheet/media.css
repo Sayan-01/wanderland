@@ -54,5 +54,11 @@
   .nav-2{
     height: 74px;
   }
-  
+  .img2{
+    display: none;
+  }
+  .img1{
+    height: 59.4vmin!important;
+    margin: 0!important;
+  }
 }

@@ -106,9 +106,14 @@ a h2 {
 }
 
 .show-main {
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.s-123 {
+  width: 90vmin;
 }
 
 .show-img {
@@ -118,8 +123,7 @@ a h2 {
 }
 
 .show-img img {
-  height: 23.5rem;
-  width: 34.5rem;
+  height: 28.9vmin;
   border-radius: 13px;
   object-fit: cover;
   object-position: center;
@@ -127,8 +131,7 @@ a h2 {
 
 .edit-btn,
 .delet-btn {
-  padding: 5px;
-  width: 50px;
+  padding: 5px 10px;
   display: inline-block;
   text-align: center;
   outline: none;

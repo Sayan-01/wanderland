@@ -1,11 +1,10 @@
 <% layout('/layouts/boilerplats') -%>
 
-<div class="show-main body px-lg-5 px-md-3 px-sm-3 px-3 body">
+<div class="show-main body">
   <h2>Listing in detail</h2>
-
   <div class="s-123">
-    <div class="show-img"><img style="margin-right: 0.8rem" class="my-sm-3 my-3" src="<%= fulllisting.image.url %>" /><img class="mb-sm-3 my-3" src="<%= fulllisting.image.url %>" /></div>
-    <h3><%= fulllisting.title %> ( <b>@<%= fulllisting.owner.username %></b> )</h3>
+    <div class="show-img"><img style="margin-right: 0.8rem" class="my-sm-3 my-3 img1" src="<%= fulllisting.image.url %>" /><img class="mb-sm-3 my-3 img2" src="<%= fulllisting.image.url %>" /></div>
+    <h3><%= fulllisting.title %> <br>( <b>@<%= fulllisting.owner.username %></b> )</h3>
     <div class="show-about">
       <p><%= fulllisting.description %></p>
       <p>&#8377;&nbsp;<%=fulllisting.price.toLocaleString("en-IN") %></p>
@@ -16,7 +15,7 @@
       <a href="/listing/<%= fulllisting._id %>/edit"><button class="a">Edit</button></a>
     </div>
     <div class="delet-btn">
-      <button class="a">Delet</button>
+      <a><button class="a pr-1">Delet</button></a>
     </div>
     <hr>
     <% } %>
