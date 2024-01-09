@@ -79,55 +79,150 @@
         <div class="invalid-feedback">Provide a valid location.</div>
       </div>
 
-      <div class="mb-3">
-        <label for="category" class="form-label">Category</label>
-        <input
-          name="listing[category]"
-          placeholder="enter category"
-          type="text"
-          class="form-control"
-          id="exampleInputPassword1"
-          required
-        />
-        <div class="invalid-feedback">Provide a valid category.</div>
-      </div>
-
-      <!-- <div class="btn-group">
-        <button type="button" class="btn btn-danger">Action</button>
-        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+      <label class="mb-2">Category</label>
+      <div class="btn-group">
+        <button type="button" class="btn btn100" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">Choose Category</button>
+        <button type="button" class="btn btn200 dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
           <span class="visually-hidden">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="#"><div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="mountain">
+            <input class="form-check-input" type="checkbox" name="category[mountain]" value="mountain" id="mountain">
             <label class="form-check-label" for="mountain">
               mountain
             </label>
           </div></a></li>
 
           <li><a class="dropdown-item" href="#"><div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="boat">
+            <input class="form-check-input" type="checkbox" name="category[farm]" value="farm" id="farm">
+            <label class="form-check-label" for="farm">
+              farm
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[beach]" value="beach" id="beach">
+            <label class="form-check-label" for="beach">
+              beach
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[house]" value="house" id="house">
+            <label class="form-check-label" for="house">
+              house
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[bighouse]" value="bighouse" id="bighouse">
+            <label class="form-check-label" for="bighouse">
+              bighouse
+            </label>
+          </div></a></li>
+
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[castle]" value="castle" id="castle">
+            <label class="form-check-label" for="castle">
+              castle
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[hotel]" value="hotel" id="hotel">
+            <label class="form-check-label" for="hotel">
+              hotel
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[swimming]" value="swimming" id="swimming">
+            <label class="form-check-label" for="swimming">
+              swimming
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[shop]" value="shop" id="shop">
+            <label class="form-check-label" for="shop">
+              shop
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[treehouse]" value="treehouse" id="treehouse">
+            <label class="form-check-label" for="treehouse">
+              treehouse
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[lake]" value="lake" id="lake">
+            <label class="form-check-label" for="lake">
+              lake
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[snow]" value="snow" id="snow">
+            <label class="form-check-label" for="snow">
+              snow
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[hut]" value="hut" id="hut">
+            <label class="form-check-label" for="hut">
+              hut
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[boat]" value="boat" id="boat">
             <label class="form-check-label" for="boat">
               boat
             </label>
           </div></a></li>
 
           <li><a class="dropdown-item" href="#"><div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="island">
+            <input class="form-check-input" type="checkbox" name="category[island]" value="island" id="island">
             <label class="form-check-label" for="island">
               island
             </label>
           </div></a></li>
 
           <li><a class="dropdown-item" href="#"><div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="jungle">
-            <label class="form-check-label" for="jungle">
-              jungle
+            <input class="form-check-input" type="checkbox" name="category[tent]" value="tent" id="tent">
+            <label class="form-check-label" for="tent">
+              tent
             </label>
           </div></a></li>
-        </ul>
-      </div> -->
 
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[cave]" value="cave" id="cave">
+            <label class="form-check-label" for="cave">
+              cave
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[omg]" value="omg" id="omg">
+            <label class="form-check-label" for="omg">
+              omg
+            </label>
+          </div></a></li>
+
+          <li><a class="dropdown-item" href="#"><div class="form-check">
+            <input class="form-check-input" type="checkbox" name="category[trending]" value="trending" id="trending">
+            <label class="form-check-label" for="trending">
+              trending
+            </label>
+          </div></a></li>
+
+        </ul>
+      </div>
+      <br>
       <button type="submit" class="btn btn-dark">Submit</button>
     </form>
   </div>

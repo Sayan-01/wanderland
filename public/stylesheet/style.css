@@ -434,4 +434,23 @@ i {
   margin: 0;
 }
 
+ul {
+  height:300px;
+  overflow: auto!important;
+}
 
+.btn-group {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.btn100 {
+  flex: 1;
+  border: 0.8px solid rgba(0, 0, 0, 0.365)!important;
+  text-align: left!important;
+}
+
+.btn200 {
+  flex: none!important;
+  border: 0.8px solid rgba(0, 0, 0, 0.378)!important;
+}
