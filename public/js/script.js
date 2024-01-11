@@ -18,6 +18,7 @@
 })();
 
 let a = 0;
+let b = 0;
 
 const ham = document.querySelector(".ham");
 const manu = document.querySelector(".manu");
@@ -32,6 +33,21 @@ ham.addEventListener("click", () => {
     a = 0;
   }
 });
+
+const ham2 = document.querySelector(".ham2");
+const manu2 = document.querySelector(".manu2");
+
+ham2.addEventListener("click", () => {
+  if (b === 0) {
+    manu2.classList.remove("hidden");
+    b = 1;
+  } else {
+    manu2.classList.add("hidden");
+    b = 0;
+  }
+});
+
+//...................................................
 
 const del = document.querySelector(".delet-btn");
 const delPop = document.querySelector(".delete-pop")

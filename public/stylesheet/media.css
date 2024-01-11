@@ -39,11 +39,12 @@
   .search-hide{
     padding: 14px 0px;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
   }
   .navbar-nav{
     padding: 14px 11px;
-    width: 100%;
+    flex: 1;
   }
   .for-navbarnav-hide{
     display: none;
@@ -60,5 +61,9 @@
   .img1{
     width: 89vmin!important;
     margin: 0!important;
+  }
+  .manu-hide{
+    padding: 14px 0px;
+    display: block;
   }
 }

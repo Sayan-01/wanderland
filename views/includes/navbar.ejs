@@ -3,7 +3,7 @@
     <div class="abnb-img">
       <a class="navbar-brand" href="#"><img class="color" src="/images/Airbnb-logo.png" /> </a>
     </div>
-    <div class="navbarNavAltmarkup for-navbarnav-hide" style="margin: 0;">
+    <div class="navbarNavAltmarkup for-navbarnav-hide" style="margin: 0">
       <div class="navbar-nav">
         <a class="nav-link" href="/">Home</a>
         <a class="nav-link a-border" href="/listing">All listing</a>
@@ -11,20 +11,21 @@
       </div>
     </div>
 
-    
-      <div class="search-hide navbarNavAltmarkup" style="margin: 0;">
-        <div class="navbar-nav">
-          <div class="search">Search here</div>
-        </div>
+    <div class="search-hide navbarNavAltmarkup" style="margin: 0">
+      <div class="navbar-nav">
+        <div class="search">Search here</div>
       </div>
-    
+      <div class="account ham2" style="padding: 13px;">
+        <div><img src="/images/menu_burger_icon_177188.png" /></div>
+      </div>
+    </div>
 
     <div class="support">
       <div class="a-bnb-home">
         <a>Airbnb your home</a>
         <div style="height: 42px; width: 46px"></div>
       </div>
-      <div class="account ham" style="visibility:inherit !important;">
+      <div class="account ham" style="visibility: inherit !important">
         <div><img src="/images/menu_burger_icon_177188.png" /></div>
         <div class="acc"></div>
       </div>
@@ -34,13 +35,23 @@
 
 <div class="manu hidden mx-lg-5 mx-md-4 mx-sm- mx-4">
   <% if(!currentUser){ %>
-    <a href="/signup">Sign up</a><br />
-    <a href="/login">Log in</a><br />
-  <% } %>
-
-  <% if(currentUser){ %>
-    <a href="/logout">Logout</a><br />
+  <a href="/signup">Sign up</a><br />
+  <a href="/login">Log in</a><br />
+  <% } %> <% if(currentUser){ %>
+  <a href="/logout">Logout</a><br />
   <% } %>
   <a>Air bnb your home </a><br />
   <a>Your home</a>
+</div>
+
+<div class="manu2 hidden mx-lg-5 mx-md-4 mx-sm- mx-4">
+  <% if(!currentUser){ %>
+  <a href="/signup">Sign up</a><br />
+  <a href="/login">Log in</a><br />
+  <% } %> <% if(currentUser){ %>
+  <a href="/logout">Logout</a><br />
+  <% } %>
+  <a href="/listing">All Listing </a><br />
+  <a href="/">Your Home</a><br>
+  <a href="/listing/home">Creat Listing</a>
 </div>
