@@ -17,8 +17,9 @@
   });
 })();
 
-let a = 0;
+
 let b = 0;
+let a = 0;
 
 const ham = document.querySelector(".ham");
 const manu = document.querySelector(".manu");
@@ -33,6 +34,26 @@ ham.addEventListener("click", () => {
     a = 0;
   }
 });
+
+window.addEventListener("scroll", () => {
+  // Check if the menu is currently visible
+  if (a === 1) {
+    // Hide the menu when scrolling occurs
+    manu.classList.add("hidden");
+    a = 0;
+  }
+});
+
+// Event listener for document click
+document.addEventListener("click", (event) => {
+  // Check if the clicked element is not the menu or ham
+  if (!manu.contains(event.target) && !ham.contains(event.target)) {
+    // Hide menu on document click
+    manu.classList.add("hidden");
+    a = 0;
+  }
+});
+
 
 const ham2 = document.querySelector(".ham2");
 const manu2 = document.querySelector(".manu2");
