@@ -35,11 +35,8 @@ ham.addEventListener("click", () => {
   }
 });
 
-// Event listener for document click
 document.addEventListener("click", (event) => {
-  // Check if the clicked element is not the menu or ham
   if (!manu.contains(event.target) && !ham.contains(event.target)) {
-    // Hide menu on document click
     manu.classList.add("hidden");
     a = 0;
   }
@@ -54,6 +51,13 @@ ham2.addEventListener("click", () => {
     manu2.classList.remove("hidden");
     b = 1;
   } else {
+    manu2.classList.add("hidden");
+    b = 0;
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!manu2.contains(event.target) && !ham2.contains(event.target)) {
     manu2.classList.add("hidden");
     b = 0;
   }
