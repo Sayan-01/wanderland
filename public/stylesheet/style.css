@@ -419,6 +419,11 @@ textarea {
   height: 3rem;
   width: 240px;
   margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12.5px;
+  font-weight: 700;
 }
 
 i {
@@ -466,5 +471,18 @@ ul {
 }
 
 .manu-hide {
+  display: none;
+}
+
+.form-switch input{
+  height: 30px;
+  width: 45px!important;
+}
+
+.form-switch {
+  margin-left: 25px;
+}
+
+.gst-span {
   display: none;
 }

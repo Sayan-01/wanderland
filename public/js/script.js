@@ -35,15 +35,6 @@ ham.addEventListener("click", () => {
   }
 });
 
-window.addEventListener("scroll", () => {
-  // Check if the menu is currently visible
-  if (a === 1) {
-    // Hide the menu when scrolling occurs
-    manu.classList.add("hidden");
-    a = 0;
-  }
-});
-
 // Event listener for document click
 document.addEventListener("click", (event) => {
   // Check if the clicked element is not the menu or ham
@@ -76,3 +67,4 @@ const delPop = document.querySelector(".delete-pop")
 del.addEventListener("click", () => {
   delPop.classList.add("lift")
 })
+
