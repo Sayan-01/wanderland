@@ -29,6 +29,8 @@ ham.addEventListener("click", () => {
   if (a === 0) {
     manu.classList.remove("hidden");
     a = 1;
+        console.log(a);
+
   } else {
     manu.classList.add("hidden");
     a = 0;
@@ -50,6 +52,7 @@ ham2.addEventListener("click", () => {
   if (b === 0) {
     manu2.classList.remove("hidden");
     b = 1;
+    
   } else {
     manu2.classList.add("hidden");
     b = 0;
@@ -65,10 +68,29 @@ document.addEventListener("click", (event) => {
 
 //...................................................
 
-const del = document.querySelector(".delet-btn");
-const delPop = document.querySelector(".delete-pop")
-
-del.addEventListener("click", () => {
-  delPop.classList.add("lift")
+const searchicon = document.querySelector(".search-icon");
+const searchhide = document.querySelector(".search-hide");
+const bb = document.querySelector(".navbar-nav");
+let x = 0
+searchicon.addEventListener("click", ()=>{
+  if (x === 0) {
+    searchhide.classList.remove("search-hide2");
+    bb.classList.add("hidden");
+    ham2.classList.add("hidden")
+    x = 1;
+    
+  } else {
+    searchhide.classList.add("search-hide2");
+    bb.classList.remove("hidden");
+    x = 0;
+  }
+  
 })
 
+
+const del = document.querySelector(".delet-btn");
+const delPop = document.querySelector(".delete-pop");
+
+del.addEventListener("click", () => {
+  delPop.classList.add("lift");
+});

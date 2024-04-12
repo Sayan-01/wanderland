@@ -1,31 +1,76 @@
 <nav class="navbar navbar-expand-md bg-body-light sticky-top px-lg-5 px-md-3 px-sm-3 px-3 mx-xl-4">
   <div class="container-fluid">
     <div class="abnb-img">
-      <a class="navbar-brand" href="#"><img class="color" src="/images/Airbnb-logo.png" /> </a>
+      <a
+        class="navbar-brand"
+        href="#"
+        ><img
+          class="color"
+          src="/images/Airbnb-logo.png"
+        />
+      </a>
     </div>
-    <div class="navbarNavAltmarkup for-navbarnav-hide" style="margin: 0">
+    <div
+      class="bb navbarNavAltmarkup for-navbarnav-hide"
+      style="margin: 0"
+    >
       <div class="navbar-nav">
-        <a class="nav-link" href="/">Home</a>
-        <a class="nav-link a-border" href="/listing">All listing</a>
-        <a class="nav-link" href="/listing/new">Add new listing</a>
+        <a
+          class="nav-link"
+          href="/"
+          >Home</a
+        >
+        <a
+          class="nav-link a-border"
+          href="/listing"
+          >All listing</a
+        >
+        <a
+          class="nav-link"
+          href="/listing/new"
+          >Add new listing</a
+        >
       </div>
+      <div class="search-icon">Search</div>
     </div>
-
-    <div class="search-hide navbarNavAltmarkup" style="margin: 0">
-      <div class="navbar-nav">
-        <div class="search">Search here</div>
+    <div class="goo">
+      <div
+        class="search-hide search-hide2 navbarNavAltmarkup"
+        style="margin: 0"
+      >
+        <div class="navbar-nav navbar-nav2">
+          <div class="search">
+            <form
+              method="POST"
+              action="/listing/search"
+            >
+              <input
+                name="listingss[title]"
+                id="input"
+                placeholder="Search here"
+              /><button type="submit"><img src="/images/search-interface-symbol.png" /></button>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="account ham2" style="padding: 13px;">
+      <!-- f -->
+      <div
+        class="account hidden ham2"
+        style="padding: 13px"
+      >
         <div><img src="/images/menu_burger_icon_177188.png" /></div>
       </div>
     </div>
-
+    <!-- f -->
     <div class="support">
       <div class="a-bnb-home">
         <a>Airbnb your home</a>
         <div style="height: 42px; width: 46px"></div>
       </div>
-      <div class="account ham" style="visibility: inherit !important">
+      <div
+        class="account ham"
+        style="visibility: inherit !important"
+      >
         <div><img src="/images/menu_burger_icon_177188.png" /></div>
         <div class="acc"></div>
       </div>
@@ -52,6 +97,6 @@
   <a href="/logout">Logout</a><br />
   <% } %>
   <a href="/listing">All Listing </a><br />
-  <a href="/">Your Home</a><br>
+  <a href="/">Your Home</a><br />
   <a href="/listing/new">Creat Listing</a>
 </div>

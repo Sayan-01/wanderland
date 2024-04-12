@@ -20,6 +20,10 @@ body::-webkit-scrollbar {
   display: none !important;
 }
 
+.home {
+  height: 100vh;
+}
+
 a {
   text-decoration: none !important;
 }
@@ -170,15 +174,9 @@ a h2 {
   padding: 0 1rem !important;
 }
 
-.search {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.search-hide {
+.search-hide2 {
   display: none;
-
-
+  transition: all 1s linear;
 }
 
 .navbarNavAltmarkup {
@@ -187,6 +185,10 @@ a h2 {
   margin: 0 24px;
 }
 
+.bb {
+  display: flex;
+  align-items: center;
+}
 .navbar-nav:hover {
   box-shadow: 0px 4.2px 5px -2px rgba(0, 0, 0, 0.32);
   -webkit-box-shadow: 0px 4.2px 5px -2px rgba(0, 0, 0, 0.33);
@@ -229,7 +231,8 @@ a h2 {
   overflow-x: auto;
 }
 
-.manu, .manu2{
+.manu,
+.manu2 {
   width: 200px;
   border-top: 1px solid rgba(4, 4, 4, 0.158);
   box-shadow: 0px 1.3px 5px -2px rgba(0, 0, 0, 0.474);
@@ -244,16 +247,19 @@ a h2 {
   cursor: default;
 }
 
-.manu a ,.manu2 a{
+.manu a,
+.manu2 a {
   margin: 10px 20px !important;
   display: inline-block;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+  /* transition: all 2s; */
 }
 
-.ham img, .ham2 img{
+.ham img,
+.ham2 img {
   height: 25px;
   opacity: 0.8;
   width: 24px;
@@ -292,6 +298,7 @@ a h2 {
 .a-bnb-home {
   display: flex;
   align-items: center;
+  margin-right: -25px;
 }
 
 .a-bnb-home a h6 {
@@ -410,6 +417,7 @@ textarea {
 }
 
 .filter-2 {
+  display: none;
   width: 92px;
   height: 3rem;
   margin: 0 18px 0 10px;
@@ -450,8 +458,8 @@ i {
 }
 
 ul {
-  height:300px;
-  overflow: auto!important;
+  height: 300px;
+  overflow: auto !important;
 }
 
 .btn-group {
@@ -461,22 +469,22 @@ ul {
 
 .btn100 {
   flex: 1;
-  border: 0.8px solid rgba(0, 0, 0, 0.365)!important;
-  text-align: left!important;
+  border: 0.8px solid rgba(0, 0, 0, 0.365) !important;
+  text-align: left !important;
 }
 
 .btn200 {
-  flex: none!important;
-  border: 0.8px solid rgba(0, 0, 0, 0.378)!important;
+  flex: none !important;
+  border: 0.8px solid rgba(0, 0, 0, 0.378) !important;
 }
 
 .manu-hide {
   display: none;
 }
 
-.form-switch input{
+.form-switch input {
   height: 30px;
-  width: 45px!important;
+  width: 45px !important;
 }
 
 .form-switch {
@@ -485,4 +493,49 @@ ul {
 
 .gst-span {
   display: none;
+}
+
+.search {
+  padding-left: 16px;
+  display: flex;
+}
+
+.search input {
+  border: none !important;
+  outline: none !important;
+}
+
+.search button {
+  margin-right: 15px !important;
+  background-color: white;
+  border: none !important;
+  outline: none !important;
+}
+
+.search button img {
+  width: 15px;
+  height: 15px;
+}
+
+.search-icon img {
+  width: 15px;
+  height: 15px;
+}
+.search-icon {
+  padding: 10.5px 16px;
+  border-radius: 50px;
+  margin: 10px;
+  -webkit-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.234);
+  box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.228);
+}
+
+.ham2 {
+  width: 52px;
+}
+
+.search, form {
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
 }

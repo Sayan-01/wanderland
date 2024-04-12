@@ -90,7 +90,14 @@ app.use("/", user);
 
 app.get("/listing/filter/:category", async (req, res) => {
   let { category } = req.params;
-  let alllisting = await Listing.find({ category: category })
+  let alllisting = await Listing.find({ category: category });
+  res.render("listing/home.ejs", { alllisting: alllisting });
+});
+
+app.post("/listing/search/", async (req, res) => {
+  let { title } = req.body.listingss;
+  console.log(req.body.listingss);
+  let alllisting = await Listing.find({ $or: [{ title: { $regex: title, $options: "i" } }] });
   res.render("listing/home.ejs", { alllisting: alllisting });
 });
 

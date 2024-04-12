@@ -5,7 +5,7 @@
     width: 30px;
     margin-right: 20px;
   }
-  .color { 
+  .color{
     width: 30px;
     object-fit: cover;
     object-position: left;
@@ -13,67 +13,88 @@
 }
 
 @media (max-width: 991px) {
-  .abnb-img{
+  .abnb-img {
     object-fit: cover;
-    flex: 0 1 0px!important;
+    flex: 0 1 0px !important;
   }
 }
 
 @media (min-width: 991px) and (max-width: 1140px) {
-  
-  .support{
-    flex: 0 1 280px!important;
+  .support {
+    flex: 0 1 280px !important;
+  }
+}
+@media (min-width: 845px) {
+  .navbar-nav2 {
+    width: 340px;
+  }
+  .navbar-nav2:hover {
+    width: 340px;
+-webkit-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.234);
+  box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.228);
   }
 }
 
-@media (max-width: 775px) {
-  .support, .abnb-img{
+@media (max-width: 845px) {
+  .support,
+  .abnb-img {
     display: none;
   }
-  .navbar{
+  .navbar {
     border-bottom: none;
   }
-  #navbarNavAltMarkup{
+  #navbarNavAltMarkup {
     width: 100%;
   }
-  .search-hide{
+  .goo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+  .ham2{
+    display: block !important;
+  }
+  .search-hide {
     padding: 14px 0px;
     width: 100%;
-    display: flex;
     align-items: center;
+    display: flex;
   }
-  .navbar-nav{
+  .navbar-nav {
     padding: 14px 11px;
     flex: 1;
   }
-  .for-navbarnav-hide{
+  .for-navbarnav-hide {
     display: none;
   }
-  .filter-2, .gst{
+  .filter-2,
+  .gst {
     display: none;
   }
-  .nav-2{
+  .nav-2 {
     height: 74px;
   }
-  .img2{
+  .img2 {
     display: none;
   }
-  .img1{
-    width: 89vmin!important;
-    margin: 0!important;
+  .img1 {
+    width: 89vmin !important;
+    margin: 0 !important;
   }
-  .manu-hide{
+  .manu-hide {
     padding: 14px 0px;
     display: block;
   }
-  .navbar-nav:hover{
+  .navbar-nav:hover {
     -webkit-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.234);
-  box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.228);
+    -moz-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.234);
+    box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.228);
   }
-  .account:hover{
+  .account:hover {
     -webkit-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.234);
-  box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.228);
+    -moz-box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.234);
+    box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.228);
   }
 }
