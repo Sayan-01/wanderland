@@ -31,17 +31,17 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.engine("ejs", engine);
 
 const dbUrl = process.env.ATLASDB_URL;
-const dbUrl2 = "mongodb://localhost:27017/wanderlust";
+// const dbUrl2 = "mongodb://localhost:27017/wanderlust";
 
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect(dbUrl2);
+  await mongoose.connect(dbUrl);
 }
 
 const store = MongoStore.create({
   //method to creat ney mongo store
-  mongoUrl: dbUrl2,
+  mongoUrl: dbUrl,
   crypto: {
     secret: process.env.SECRET,
   },
