@@ -534,7 +534,7 @@ ul {
   width: 52px;
 }
 
-.search, form {
+.search, .searchform {
   width: 100% !important;
   display: flex;
   justify-content: space-between;
